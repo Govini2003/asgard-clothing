@@ -1,0 +1,26 @@
+/* In App.css or a relevant CSS file */
+.product-grid {
+  padding: 2rem;
+}
+.grid-row {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.grid-item {
+  flex: 1;
+  max-width: 33.33%;
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.grid-item h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+.grid-item p {
+  margin: 0.25rem 0;
+  color: #666;
+}
