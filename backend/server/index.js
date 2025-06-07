@@ -8,19 +8,17 @@ const PORT = 4000;
 const JWT_SECRET = 'your_jwt_secret'; // In production, use env vars
 
 const loginLog = [];
-
 // In-memory user storage
-const users = [user]; // Start with the demo user
+const users = [
+  {
+    id: 1,
+    email: 'user@example.com',
+    passwordHash: bcrypt.hashSync('password123', 10),
+  }
+];
 
 app.use(cors());
 app.use(express.json());
-
-// Demo user (in production, use a DB)
-const user = {
-  id: 1,
-  email: 'user@example.com',
-  passwordHash: bcrypt.hashSync('password123', 10), // hashed password
-};
 
 app.post('/signup', async (req, res) => {
   const { email, password } = req.body;
@@ -59,8 +57,9 @@ app.post('/login', async (req, res) => {
   res.json({ token });
 });
 
-app.get('/login-log', (req, res) => {
-  res.json(loginLog);
+app.get('/users', (req, res) => {
+  // For development only: do not expose password hashes
+  res.json(users.map(({ passwordHash, ...rest }) => rest));
 });
 
 app.listen(PORT, () => {
