@@ -11,7 +11,11 @@ type AppState = {
   currentImageIndex: number;
 };
 
-const images = ['/assets/home img.png', '/assets/home 2.png', '/assets/home 3.png'];
+const images = [
+  import.meta.env.BASE_URL + 'assets/home img.png',
+  import.meta.env.BASE_URL + 'assets/home 2.png',
+  import.meta.env.BASE_URL + 'assets/home 3.png',
+];
 
 class App extends Component<{}, AppState> {
   timer: NodeJS.Timeout | undefined;
@@ -141,7 +145,7 @@ class App extends Component<{}, AppState> {
                       <div className="group">
                         <Link to="/product/1">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                            <img src="/assets/1.jpg" alt="Product 1" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                            <img src={import.meta.env.BASE_URL + "assets/1.jpg"} alt="Product 1" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                           </div>
                         </Link>
@@ -154,7 +158,7 @@ class App extends Component<{}, AppState> {
                       <div className="group">
                         <Link to="/product/2">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                            <img src="/assets/2.jpg" alt="Product 2" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                            <img src={import.meta.env.BASE_URL + "assets/2.jpg"} alt="Product 2" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                           </div>
                         </Link>
@@ -167,7 +171,7 @@ class App extends Component<{}, AppState> {
                       <div className="group">
                         <Link to="/product/3">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                            <img src="/assets/3.jpg" alt="Product 3" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                            <img src={import.meta.env.BASE_URL + "assets/3.jpg"} alt="Product 3" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                           </div>
                         </Link>
@@ -180,7 +184,7 @@ class App extends Component<{}, AppState> {
                       <div className="group">
                         <Link to="/product/4">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                            <img src="/assets/4.jpg" alt="Product 4" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                            <img src={import.meta.env.BASE_URL + "assets/4.jpg"} alt="Product 4" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                           </div>
                         </Link>
@@ -193,7 +197,7 @@ class App extends Component<{}, AppState> {
                       <div className="group">
                         <Link to="/product/5">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
-                            <img src="/assets/5.jpg" alt="Product 5" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                            <img src={import.meta.env.BASE_URL + "assets/5.jpg"} alt="Product 5" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
                           </div>
                         </Link>
