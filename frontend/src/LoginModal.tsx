@@ -17,17 +17,12 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLoginSuccess
     setLoading(true);
     setError('');
     try {
-      const res = await fetch('http://localhost:4000/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.message || 'Login failed');
-      onLoginSuccess(data.token);
+      // Mock login - accept any email/password
+      await new Promise(resolve => setTimeout(resolve, 500)); // Simulate network delay
+      onLoginSuccess('mock-token');
       onClose();
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);
     }
