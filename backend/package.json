@@ -1,0 +1,20 @@
+{
+  "name": "asgard-clothing-backend",
+  "version": "1.0.0",
+  "description": "Backend for Asgard Clothing website",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "dependencies": {
+    "asgard-clothing-backend": "file:",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
