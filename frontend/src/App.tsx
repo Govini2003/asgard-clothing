@@ -93,7 +93,7 @@ class App extends Component<{}, AppState> {
   render() {
     const { currentImageIndex } = this.state;
     return (
-      <Router basename="/asgard-clothing/">
+      <Router>
         <Routes>
           <Route
             path="/"
