@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
-import { Instagram, ShoppingBag, ChevronDown } from 'lucide-react';
+import { Instagram, ShoppingBag, ChevronDown, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LoginModal from './LoginModal';
 
 const Navbar: React.FC = () => {
   const [loginOpen, setLoginOpen] = useState(false);
   const [token, setToken] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <>
@@ -40,8 +45,19 @@ const Navbar: React.FC = () => {
 
       {/* Main Navigation */}
       <nav className="border-b">
-        <div className="container mx-auto px-4 py-1">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto px-4 py-1 flex justify-between items-center">
+          {/* Mobile menu button and logo for mobile */}
+          <div className="md:hidden flex items-center">
+            <button onClick={toggleMobileMenu} className="text-black p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
+              <Menu className="h-6 w-6" />
+            </button>
+            <Link to="/" className="ml-4">
+              <img src="/assets/new logo.png" alt="ASGARD" className="h-10" />
+            </Link>
+          </div>
+
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden md:flex flex-1 justify-between items-center">
             <div className="flex space-x-8">
               <Link to="/" className="text-black hover:text-gray-600">HOME</Link>
               <div className="relative group">
@@ -78,6 +94,43 @@ const Navbar: React.FC = () => {
               />
             </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden absolute top-0 left-0 w-full h-full bg-white z-40 p-4">
+              <div className="flex justify-end">
+                <button onClick={toggleMobileMenu} className="text-black p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-black">
+                  &times;
+                </button>
+              </div>
+              <div className="flex flex-col space-y-4 mt-4">
+                <Link to="/" className="text-black hover:text-gray-600 text-lg py-2">HOME</Link>
+                <div className="relative">
+                  <a href="#" className="text-black hover:text-gray-600 flex items-center text-lg py-2">WOMEN <ChevronDown className="h-5 w-5 ml-2" /></a>
+                  <div className="pl-4 pt-2 flex flex-col space-y-2">
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">SHOP ALL</a>
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">SWIM</a>
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">INTIMATES</a>
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">APPAREL</a>
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">ACCESSORIES</a>
+                  </div>
+                </div>
+                <div className="relative">
+                  <a href="#" className="text-black hover:text-gray-600 flex items-center text-lg py-2">MEN <ChevronDown className="h-5 w-5 ml-2" /></a>
+                  <div className="pl-4 pt-2 flex flex-col space-y-2">
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">APPAREL</a>
+                    <a href="#" className="block px-4 py-2 text-base text-black hover:bg-gray-100">ACCESSORIES</a>
+                  </div>
+                </div>
+                <a href="#" className="text-black hover:text-gray-600 text-lg py-2">SALE</a>
+                <input
+                  type="search"
+                  placeholder="Search"
+                  className="w-full px-4 py-2 border border-gray-700 rounded focus:outline-none focus:border-black mt-4"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </nav>
     </>
