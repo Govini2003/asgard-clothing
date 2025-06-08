@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
         onLoginSuccess={(tok) => setToken(tok)}
       />
       {/* Top Instagram Bar */}
-      <div className="bg-black text-white py-1 px-4">
+      <div className="bg-black text-white py-1.5 px-4">
         <div className="container mx-auto flex justify-between items-center">
           <a 
             href="https://www.instagram.com/asgard_clothing_co?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
 
       {/* Main Navigation */}
       <nav className="border-b">
-        <div className="container mx-auto px-4 py-2">
+        <div className="container mx-auto px-4 py-1">
           <div className="flex justify-between items-center">
             <div className="flex space-x-8">
               <Link to="/" className="text-black hover:text-gray-600">HOME</Link>
@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
 
             <div className="flex-1 flex justify-center">
               <Link to="/">
-                <img src="/assets/new logo.png" alt="ASGARD" className="h-16" />
+                <img src="/assets/new logo.png" alt="ASGARD" className="h-14" />
               </Link>
             </div>
 
