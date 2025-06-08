@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Instagram, ShoppingBag } from 'lucide-react';
+import { Instagram, ShoppingBag, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LoginModal from './LoginModal';
 
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
           >
             <Instagram className="h-4 w-4 mr-2" />
           </a>
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-12">
             <span className="text-sm">LKR</span>
             {token ? (
               <span className="text-sm">LOGGED IN</span>
@@ -45,10 +45,21 @@ const Navbar: React.FC = () => {
             <div className="flex space-x-8">
               <Link to="/" className="text-black hover:text-gray-600">HOME</Link>
               <div className="relative group">
-                <a href="#" className="text-black hover:text-gray-600">WOMEN</a>
+                <a href="#" className="text-black hover:text-gray-600 flex items-center">WOMEN <ChevronDown className="h-4 w-4 ml-1" /></a>
+                <div className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-md z-10 min-w-[120px]">
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">SHOP ALL</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">SWIM</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">INTIMATES</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">APPAREL</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">ACCESSORIES</a>
+                </div>
               </div>
               <div className="relative group">
-                <a href="#" className="text-black hover:text-gray-600">MEN</a>
+                <a href="#" className="text-black hover:text-gray-600 flex items-center">MEN <ChevronDown className="h-4 w-4 ml-1" /></a>
+                <div className="absolute hidden group-hover:block bg-white shadow-lg py-2 rounded-md z-10 min-w-[120px]">
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">APPAREL</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-black hover:bg-gray-100">ACCESSORIES</a>
+                </div>
               </div>
               <a href="#" className="text-black hover:text-gray-600">SALE</a>
             </div>
@@ -63,7 +74,7 @@ const Navbar: React.FC = () => {
               <input
                 type="search"
                 placeholder="Search"
-                className="px-4 py-1 border rounded focus:outline-none focus:border-black"
+                className="px-4 py-1 border border-gray-700 rounded focus:outline-none focus:border-black"
               />
             </div>
           </div>
