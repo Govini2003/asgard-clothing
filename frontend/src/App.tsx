@@ -143,7 +143,7 @@ class App extends Component<{}, AppState> {
                     <h2 className="text-2xl font-bold text-center mb-8">Featured Products</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                       {/* Product 1 */}
-                      <div className="group">
+                      <div className="group p-4">
                         <Link to="/product/1">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
                             <img src={import.meta.env.BASE_URL + "assets/1.jpg"} alt="Product 1" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -156,7 +156,7 @@ class App extends Component<{}, AppState> {
                         </div>
                       </div>
                       {/* Product 2 */}
-                      <div className="group">
+                      <div className="group p-4">
                         <Link to="/product/2">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
                             <img src={import.meta.env.BASE_URL + "assets/2.jpg"} alt="Product 2" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -169,7 +169,7 @@ class App extends Component<{}, AppState> {
                         </div>
                       </div>
                       {/* Product 3 */}
-                      <div className="group">
+                      <div className="group p-4">
                         <Link to="/product/3">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
                             <img src={import.meta.env.BASE_URL + "assets/3.jpg"} alt="Product 3" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -182,7 +182,7 @@ class App extends Component<{}, AppState> {
                         </div>
                       </div>
                       {/* Product 4 */}
-                      <div className="group">
+                      <div className="group p-4">
                         <Link to="/product/4">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
                             <img src={import.meta.env.BASE_URL + "assets/4.jpg"} alt="Product 4" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
@@ -195,7 +195,7 @@ class App extends Component<{}, AppState> {
                         </div>
                       </div>
                       {/* Product 5 */}
-                      <div className="group">
+                      <div className="group p-4">
                         <Link to="/product/5">
                           <div className="relative overflow-hidden rounded-xl aspect-square cursor-pointer">
                             <img src={import.meta.env.BASE_URL + "assets/5.jpg"} alt="Product 5" className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
