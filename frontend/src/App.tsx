@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductDetail from './ProductDetail';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 type AppState = {
   currentImageIndex: number;
@@ -214,6 +215,7 @@ class App extends Component<{}, AppState> {
           />
           <Route path="/product/:id" element={<><Navbar /><ProductDetail /></>} />
         </Routes>
+        <Footer />
       </Router>
     );
   }
