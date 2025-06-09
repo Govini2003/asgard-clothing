@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="font-bold mb-4 uppercase text-black">Information</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-gray-700 hover:text-black">Search</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-black">Contact Us</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-black">Returns</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">Search</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">Contact Us</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">Returns</a></li>
           </ul>
         </div>
 
@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="font-bold mb-4 uppercase text-black">Policies</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-gray-700 hover:text-black">Privacy Policy</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-black">Shipping</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-black">Terms + Conditions</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">Privacy Policy</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">Shipping</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">Terms + Conditions</a></li>
           </ul>
         </div>
 
@@ -29,9 +29,9 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="font-bold mb-4 uppercase text-black">Collections</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="text-gray-700 hover:text-black">ASGARD Basics</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-black">ASGARD Intimates</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-black">ASGARD Summer Drop 1</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">ASGARD Basics</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">ASGARD Intimates</a></li>
+            <li><a href="#" className="text-gray-700 hover:text-black px-4">ASGARD Summer Drop 1</a></li>
           </ul>
         </div>
 
@@ -61,7 +61,7 @@ const Footer: React.FC = () => {
 
       {/* Copyright */}
       <div className="mt-12 text-center text-gray-500 text-sm">
-        <p>© 2025 ASGARD Brand. ® VMG Concepts, LLC</p>
+        <p>© 2025 ASGARD Brand.</p>
       </div>
     </footer>
   );
