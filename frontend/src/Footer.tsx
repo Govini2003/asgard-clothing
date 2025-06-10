@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
+        
         {/* POLICIES */}
         <div className="px-6 py-4">
           <h3 className="font-bold mb-4 uppercase text-black">Policies</h3>
