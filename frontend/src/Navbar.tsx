@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  
   return (
     <>
       <LoginModal
