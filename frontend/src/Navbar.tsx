@@ -3,7 +3,6 @@ import { Instagram, ShoppingBag, ChevronDown, Menu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import LoginModal from './LoginModal';
 
-
 const Navbar: React.FC = () => {
   const [loginOpen, setLoginOpen] = useState(false);
   const [token, setToken] = useState<string | null>(null);
