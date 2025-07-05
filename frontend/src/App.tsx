@@ -221,5 +221,4 @@ class App extends Component<{}, AppState> {
     );
   }
 }
-
 export default App;
