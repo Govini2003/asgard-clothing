@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 // import { Instagram, ShoppingBag, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
