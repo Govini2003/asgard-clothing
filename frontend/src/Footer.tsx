@@ -1,7 +1,6 @@
 import React from 'react';
 import { Instagram } from 'lucide-react';
 
-
 const Footer: React.FC = () => {
   return (
     <footer className="bg-white py-12 border-t mt-12">
