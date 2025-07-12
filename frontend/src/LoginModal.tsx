@@ -17,7 +17,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose, onLoginSuccess
     setLoading(true);
     setError('');
     try {
-      // Mock login - accept any email/password
+      //Mock login - accept any email/password
       await new Promise(resolve => setTimeout(resolve, 500)); // Simulate network delay
       onLoginSuccess('mock-token');
       onClose();
