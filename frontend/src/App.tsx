@@ -91,6 +91,7 @@ class App extends Component<{}, AppState> {
     return '';
   };
 
+  
   render() {
     const { currentImageIndex } = this.state;
     return (
