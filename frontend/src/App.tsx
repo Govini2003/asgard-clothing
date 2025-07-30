@@ -7,6 +7,7 @@ import ProductDetail from './ProductDetail';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
+
 type AppState = {
   currentImageIndex: number;
 };
